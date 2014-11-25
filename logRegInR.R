@@ -14,5 +14,3 @@ for (i in 0:9) {
   probs <- predict(glm.out, newdata = test.data, type = "response");
   prob.matrix[,i+1] <- probs;
 }
-
-head(prob.matrix)
