@@ -1,0 +1,8 @@
+## Misclassification error
+
+kaggledigit.misclasserr <- function(actual, expected) {
+  actual.length <- length(actual);
+  expected.length <- length(expected);
+  if( actual.length == expected.length) stop('the vectors of actual and expected values should have the same length');
+  (Reduce(sum, actual == expected))/(actual.length);
+}
