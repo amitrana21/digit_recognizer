@@ -6,5 +6,6 @@ kaggledigits.pmultinomreg <- function(training.data, actual.data, lambda) {
   y = factor(training.matrix[,1]);
   
   glmnet.out <- glmnet(X, y, family='multinomial');
-  result <- predict(glmnet.out, newx = data.matrix(actual.data), type = 'class', s = lambda )
+  result <- predict(glmnet.out, newx = data.matrix(actual.data), type = 'class', s = lambda );
+  return(result)
 }
